@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: linen;
+}
+
+h1 {
+  color: maroon;
+  margin-left: 10px;
+} 
+</style>
+</head>
+<center>
+<body>
+
+<h1>DMTWhatsApp - Direct Message To WhatsApp</h1>
+<p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+<p> Credits: Ruhulla Sheik (sk.ruhulla@gmail.com)
+<form>
+	Country Code:<input type="number" id="c_code" name="wa_number" value="91"/>
+	PhoneNo:<input type="text" id="wa_number" name="wa_number"/>
+	<input type="button" value="DirectMessage" onclick="genLink()"/>  
+</form>  
+
+
+
+</center>
+</body>
+</html>
+
+
+<script type="text/javascript">  
+function genLink()
+{  
+	var wa_number=document.getElementById("wa_number").value;
+	var regex=/^[0-9]{10}$/;
+	if(!wa_number.match(regex))
+	{
+		alert("Enter a proper mobile number");
+	}
+	else
+	{
+		var country_code=document.getElementById("c_code").value;
+		var final_number=country_code+wa_number;
+		window.open("https://api.WhatsApp.com/send?phone="+final_number);
+	}
+}  
+</script>  
