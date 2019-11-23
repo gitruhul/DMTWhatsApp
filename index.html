@@ -10,17 +10,26 @@ h1 {
   color: maroon;
   margin-left: 10px;
 } 
+input { 
+font-size: 35px; 
+}
+p{
+font-size: 20px;
+color: blue;
+}
+
 </style>
 </head>
 <center>
 <body>
 
-<h1>DMTWhatsApp - Direct Message To WhatsApp</h1>
+<h1>DMTWhatsApp</h1>
+<h2>Direct Message To WhatsApp</h2>
 <p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
 <p> Credits: Ruhulla Sheik (sk.ruhulla@gmail.com)
 <form>
-	Country Code:<input type="number" id="c_code" name="wa_number" value="91"/>
-	PhoneNo:<input type="text" id="wa_number" name="wa_number"/>
+	<font size=8>Country Code</font> <br><input type="number" id="c_code" name="wa_number" value="91" /><br><br>
+	<font size=8>Mobile Number</font> <br><input type="text" id="wa_number" name="wa_number" value="" maxlength="10" size="25"/><br><br><br>
 	<input type="button" value="DirectMessage" onclick="genLink()"/>  
 </form>  
 
